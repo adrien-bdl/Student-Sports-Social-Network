@@ -1,0 +1,54 @@
+<a href="#score" class="btn btn-primary width98" id="boutonpourajouterscore" style="display : none">Ajouter le score</a>
+<button type="button" class="btn btn-primary width98" id="addchatsupp">Rejoindre le groupe des supporters</button>
+
+<!--réfléchir à quelle page générer et comment faire pour obtenir le template ?-->
+<!--même template que ajoutmatch mais avec les infos qui avaient déjà été saisies préremplies avec l'appel de la bonne table-->
+
+<div class="card">
+  {{#.}}
+  <div class="card-header">
+    <p id="recuperationdate" style="display : none">{{date}}</p>
+    <p class="card-text">{{sport}} {{genre}} | {{dateaffichage}} {{heure}}</p>
+  </div>
+  <h3 class="centrertext">{{ecoledom}} {{numecoledom}} - {{ecolevis}} {{numecolevis}}</h3>
+  <div class="container">
+    <div class="nav-item width30">
+      <img class="centrer" src="img/logo écoles/logo{{ecoledom}}.JPEG" alt=''>
+      <!--<div class="width100 centrertext">{{ecoledom}} {{numecoledom}}</div>-->
+    </div>
+    <input type="int" class="form-control width20" id="scoreequipedom" placeholder="-" style="display: none;" />
+    <input type="int" class="form-control width20" id="scoreequipevis" placeholder="-" style="display: none;"/>
+    <div class="centrertext montrerscore" id="showscoredom" style="display: none;">{{scoredom}}</div>
+    <div class="centrertext montrerscore" id="showscorevis" style="display: none;">{{scorevis}}</div>
+    <div class="nav-item width30">
+      <img class="centrer" src="img/logo écoles/logo{{ecolevis}}.JPEG" alt=''>
+      <!--<div class="width100 centrertext">{{ecolevis}} {{numecolevis}}</div>-->
+    </div>
+  </div>
+  <!--pour les pronostics, réflechir aux tables qu'on va utliser-->
+  <div class="btn-group" role="group" aria-label="Basic example" id="divprono">
+    <button id="prono" type="button" class="btn btn-secondary">Valider mon pronostic</button>
+  </div>
+  <p class="card-text width98">Type : {{type}}</p>
+  <p class="card-text width98">Lieu : {{lieu}}</p>
+  <p class="card-text width98">{{description}}</p>
+  {{/.}}
+</div>
+
+
+<!--exploiter le bouton dans le php et l'app.js-->
+
+<!--liste des joueurs, modifier ajoutmatch et la table correspondante en conséquence-->
+<!--implique de faire une jointure avec tous les gens inscrits sur le sport qu'ils ont choisis à l'inscription-->
+
+{{#.}}
+<div class="width98" id="divlistejoueurdom">
+  <li class="list-group-item width98" id="listejoueurdom">Joueurs de la {{ecoledom}} {{numecoledom}}</li>
+  <li class="width98" id="jdom">{{joueursdom}}</li>
+</div>
+<div class="width98" id="divlistejoueurvis">
+  <li class="list-group-item width98" id="listejoueurvis">Joueurs de la {{ecolevis}} {{numecolevis}}</li>
+  <li class="width98" id="jvis">{{joueursvis}}</li>
+  <!--<a href="#joueurs" class="boutonpourchargerjoueur width98" id="prenomjoueuraregarder">{{joueursvis}}</a>-->
+</div>
+{{/.}}

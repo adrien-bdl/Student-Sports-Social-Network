@@ -1,0 +1,363 @@
+/*template actu*/
+.basnavbaractu {
+    background: linear-gradient(90deg, rgb(250, 3, 3) 20%, rgb(245, 245, 9) 20%, rgb(245, 245, 9) 40%, rgb(250, 3, 3) 40%, rgb(250, 3, 3) 60%, rgb(245, 245, 9) 60%, rgb(245, 245, 9) 80%, rgb(250, 3, 3) 80%);
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+
+#buttonpostactu {
+    margin-top: 0.4%;
+    margin-left: 1%;
+}
+
+.trierpar {
+    margin-top: 1%;
+    width: 30%;
+}
+
+.choixtrierpar {
+    margin-top: 1%;
+    width: 60%;
+}
+
+#bouttonnouveaupost {
+    margin-top: 1%;
+}
+
+#titresactus {
+    margin-top: 1%;
+    width: 90%;
+}
+
+.width30 {
+    width: 30%;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.formnouvelleactu {
+    background-color: #90f37c;
+}
+
+/*template futur*/
+.centrer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container img {
+    margin: 10px;
+}
+
+.carte {
+    margin-top: 0.5%;
+    margin-bottom: none;
+}
+
+.card-header {
+    border-style: solid;
+    border-width: 0px;
+}
+
+.card-header-titre {
+    background-color: rgb(75, 246, 13);
+    color: black;
+    font-weight: bold;
+    border: solid;
+    border-color: #050505;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+}
+
+.apparencematch {
+    color: black;
+    font-weight: bold;
+}
+
+.divongletcapajout {
+    margin-top: 0.5%;
+}
+
+.ongletcapajout {
+    background-color: rgb(75, 246, 13);
+    color: black;
+}
+
+#Trierparfuturtt {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+    border: solid;
+    border-color: #050505;
+}
+
+.toutfull {
+    width: 100%;
+    height: 100%;
+}
+
+.carteAVIRON {
+    background-color: rgb(230, 109, 93);
+}
+
+.carteBAD {
+    background-color: rgb(255, 149, 0);
+}
+
+.carteBASKET {
+    background-color: rgb(255, 213, 0);
+}
+
+.carteBOXE {
+    background-color: rgb(197, 218, 16);
+}
+
+.carteCROSSFIT {
+    background-color: rgb(140, 255, 0);
+}
+
+.carteEQUITATION {
+    background-color: rgb(43, 255, 0);
+}
+
+.carteESCALADE {
+    background-color: rgb(144, 147, 145);
+}
+
+.carteESCRIME {
+    background-color: rgb(0, 255, 225);
+}
+
+.carteFOOT {
+    background-color: rgb(0, 110, 255);
+}
+
+.carteHAND {
+    background-color: rgb(68, 0, 255);
+}
+
+.carteJUDO {
+    background-color: rgb(106, 0, 255);
+}
+
+.carteNATATION {
+    background-color: rgb(255, 0, 195);
+}
+
+.carteRAID {
+    background-color: rgb(255, 0, 144);
+}
+
+.carteRUGBY {
+    background-color: rgb(255, 0, 0);
+}
+
+.carteTENNIS {
+    background-color: rgb(222, 234, 234);
+}
+
+.carteVOLLEY {
+    background-color: rgb(251, 127, 232);
+}
+
+/*template settings*/
+#confdeconnect{
+    margin-top: 30%;
+}
+#boutonnouveaumdp{
+    margin-top: 2%;
+}
+#divlogout{
+    margin-left: 20%;
+    margin-right: auto;
+    width: 60%;
+}
+#logout{
+    
+    border: solid;
+    border-color: red;
+    border-width: 2%;
+    background-color: white;
+    color: red;
+}
+
+/*template profil*/
+#cartetitreprofil{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+/*template passes*/
+#Trierparpasses {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+/*template match*/
+.montrerscore{
+    width: 10%;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+}
+#titretemplatepasses{
+    margin-top: 2%;
+}
+
+#boutonpourajouterscore{
+    margin-top: 0.5%;
+} 
+
+#addchatsupp{
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+#divprono{
+    width: 60%;
+    margin-left: 20%;
+}
+
+/* template ajoutmatch*/
+#resultdom {
+    background-color: #a4fc93;
+}
+
+#resultvis {
+    background-color: #a4fc93;
+}
+
+#ajoutmatchdiv {
+    margin-left: 2%;
+    margin-top: 1%;
+    width: 47.5%;
+}
+
+#annulajoutmatchdiv {
+    margin-top: 1%;
+    width: 47.5%;
+}
+
+#ajout7 {
+    margin-top: 1%;
+}
+
+#ajout8 {
+    margin-top: 1%;
+}
+
+#confannulation {
+    margin-top: 10%;
+}
+
+#ouiconfannul {
+    width: 47%;
+}
+
+#nonconfannul {
+    margin-left: 2%;
+    width: 47.5%;
+}
+
+/*navabar*/
+.width20 {
+    width: 20%;
+}
+
+.backnavbar {
+    background: linear-gradient(90deg, rgb(250, 3, 3) 20%, rgb(245, 245, 9) 20%, rgb(245, 245, 9) 40%, rgb(250, 3, 3) 40%, rgb(250, 3, 3) 60%, rgb(245, 245, 9) 60%, rgb(245, 245, 9) 80%, rgb(250, 3, 3) 80%);
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+}
+
+#titreappli {
+    font-weight: bold;
+    background-color: rgb(245, 245, 9);
+}
+
+.centrer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.width5 {
+    width: 5%;
+}
+.width10 {
+    width: 10%;
+}
+
+.width18 {
+    width: 18%;
+}
+
+.width20 {
+    width: 20%;
+}
+
+.width30 {
+    width: 30%;
+}
+
+.width90 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+
+.width98 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+}
+
+.width100 {
+    width: 100%;
+}
+
+
+.activenavbas {
+    border: solid;
+    border-color: #333;
+    border-width: 2%;
+}
+
+.centrertext {
+    text-align: center;
+}
+
+.centrerverticalement {
+    display: table;
+    vertical-align: middle;
+}
+
+.centrerhorizontalement {
+    margin: auto;
+}
+
+.textmatch {
+    display: table-cell;
+}
+
+.titretemplate {
+    font-family: Arial, Helvetica, sans-serif;
+}

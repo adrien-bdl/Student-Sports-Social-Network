@@ -1,0 +1,411 @@
+<script type="text/javascript">
+    /* Voici la fonction javascript qui change la propriété "display"
+    pour afficher ou non le div selon que ce soit "none" ou "block". */
+    /*cache et réaffiche quand on appuie dessus*/
+    function masquer_div(id) {
+        if (document.getElementById(id).style.display == 'none') {
+            document.getElementById(id).style.display = 'block';
+        }
+        else {
+            document.getElementById(id).style.display = 'none';
+        }
+    }
+    function gardermasquer_div(id) {
+        if (document.getElementById(id).style.display == 'none') {
+            document.getElementById(id).style.display = 'none';
+        }
+        else {
+            document.getElementById(id).style.display = 'none';
+        }
+    }
+    function montrer_div(id) {
+        if (document.getElementById(id).style.display == 'none') {
+            document.getElementById(id).style.display = 'block';
+        }
+        else {
+            document.getElementById(id).style.display = 'block';
+        }
+    }
+
+    function displayValuedom(dataid) {
+        var radios = document.getElementById(dataid);
+        var result = document.getElementById("resultdom");
+        result.innerHTML = radios.innerHTML + " a bien été ajouté";
+    }
+
+    function displayValuevis(dataid) {
+        var radios = document.getElementById(dataid);
+        var result = document.getElementById("resultvis");
+        result.innerHTML = radios.innerHTML + " a bien été ajouté";
+    }
+    
+
+</script>
+
+<div class="form-group width98" id="ajout1">
+    <label for="exampleFormControlSelect1">Sport</label>
+    <select class="form-control" id="sport">
+        <option>AVIRON</option>
+        <option>BAD</option>
+        <option>BASKET</option>
+        <option>BOXE</option>
+        <option>CROSSFIT</option>
+        <option>EQUITATION</option>
+        <option>ESCALADE</option>
+        <option>ESCRIME</option>
+        <option>FOOT</option>
+        <option>JUDO</option>
+        <option>HAND</option>
+        <option>NATATION</option>
+        <option>RUGBY</option>
+        <option>RAID</option>
+        <option>TENNIS</option>
+        <option>VOLLEY</option>
+    </select>
+</div>
+
+<div class="form-group width98" id="ajout2">
+    <label for="exampleFormControlSelect1">Type</label>
+    <select class="form-control" id="genre">
+        <option>Féminin</option>
+        <option>Masculin</option>
+        <option>Mixte</option>
+    </select>
+</div>
+
+<div class="form-group width98" id="ajout3">
+    <label for="exampleFormControlInput1">Date</label>
+    <input type="date" class="form-control" id="date" placeholder="17/09/2002" />
+</div>
+
+<div class="form-group width98" id="ajout4">
+    <label for="exampleFormControlInput1">Heure</label>
+    <input type="datetime" class="form-control" id="heure" placeholder="16:00" />
+</div>
+
+<div class="form-group width98" id="ajout5">
+    <label for="exampleFormControlInput1">Lieu</label>
+    <input type="text" class="form-control" id="lieu" placeholder="Synthétique de l'X" />
+</div>
+
+<div class="form-group width98" id="ajout6">
+    <label for="exampleFormControlSelect2">Compétition</label>
+    <select class="form-control" id="typematch">
+        <option type="button"
+            onclick="gardermasquer_div('divchamp'); gardermasquer_div('nomcoupe'); gardermasquer_div('nomtournois');">
+            Amical</option>
+        <option type="button"
+            onclick="montrer_div('divchamp'); gardermasquer_div('nomcoupe'); gardermasquer_div('nomtournois'); gardermasquer_div('tourcoupe');">
+            Championnat</option>
+        <option type="button"
+            onclick="montrer_div('nomcoupe'); montrer_div('tourcoupe'); gardermasquer_div('nomtournois'); gardermasquer_div('divchamp'); gardermasquer_div('tourtour');">
+            Coupe
+        </option>
+        <option type="button"
+            onclick="montrer_div('nomtournois'); montrer_div('tourtour'); gardermasquer_div('nomcoupe'); gardermasquer_div('divchamp'); gardermasquer_div('tourcoupe');">
+            Tournois
+        </option>
+    </select>
+    <input type="text" class="form-control" id="nomcoupe" placeholder="Nom de la coupe" style="display:none;" />
+    <input type="text" class="form-control" id="nomtournois" placeholder="Nom du tournois" style="display:none;" />
+    <div class="form-group" id="divchamp" style="display:none;">
+        <label for="choixdiv">Division</label>
+        <select class="form-control" id="choixdiv">
+            <option>Division 1</option>
+            <option>Division 2</option>
+            <option>Division 3</option>
+            <option>Division 4</option>
+        </select>
+    </div>
+    <div class="form-group" id="tourtour" style="display:none;">
+        <label for="choixtourtour">Tour</label>
+        <select class="form-control" id="choixtourtour">
+            <option>Poule</option>
+            <option>Finale</option>
+            <option>Petite finale</option>
+            <option>Demi-finale</option>
+            <option>1/4 de finale</option>
+            <option>1/8 de finale</option>
+            <option>1/16 de finale</option>
+            <option>1/32 de finale</option>
+            <option>Tour préliminaire</option>
+            <option>Qualifications</option>
+        </select>
+    </div>
+    <div class="form-group" id="tourcoupe" style="display:none;">
+        <label for="choixtourcoupe">Tour</label>
+        <select class="form-control" id="choixtourcoupe">
+            <option>Poule</option>
+            <option>Finale</option>
+            <option>Petite finale</option>
+            <option>Demi-finale</option>
+            <option>1/4 de finale</option>
+            <option>1/8 de finale</option>
+            <option>1/16 de finale</option>
+            <option>1/32 de finale</option>
+            <option>Tour préliminaire</option>
+            <option>Qualifications</option>
+        </select>
+    </div>
+</div>
+
+<div class="form-group width98" id="ajout10">
+    <label for="exampleFormControlInput1">Description</label>
+    <input type="text" class="form-control" id="description" placeholder="Format du match, comment ça s'est passé ?" />
+</div>
+
+
+<div class="card width98" id="ajout7">
+    <div class="card-body">
+        <h5 class="card-title">Equipe domicile</h5>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Ecole domicile</label>
+            <select class="form-control" id="team1">
+                <option type="button" onclick="montrer_div('amasquerXdom');">X</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">AgroParisTech</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">AMOS</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">CS</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">CY Cergy</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Dauphine</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ECAM EPMI</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ECE Paris</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">EFREI Paris</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">EISTI Cergy</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">EM Normandie Paris</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ENS Saclay</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ENSEA Cergy</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ENSAE</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ENSTA</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">EPF Cachan</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ESCE</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ESCP</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ESIEE Paris</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ESO Sporting Club</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ESSEC</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ESTACA</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ESTP</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Ginette</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Gustave Eiffel</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">HEC</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ICAM</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ICP</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">IESEG Paris</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">IGS</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ILEPS</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">INALCO</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">INSEEC</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">IPSA</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">ISEP</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Les Ponts</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Mines Telecom</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Panthéon ASSAS</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Panthéon Sorbonne</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Paris8</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Paris Cité</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Paris EST Créteil</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Paris Nanterre</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Paris Saclay</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Paris Sud</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Pole de Vinci</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">PSB</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Sciences PO Paris</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Sciences PO St Germain en Laye
+                </option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Sorbonne Nouvelle</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Sorbonne Paris Nord</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Sorbonne Université</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">SKEMA</option>
+                <option type="button" onclick="montrer_div('amasquer1'); gardermasquer_div('amasquerXdom')">Autre
+                </option>
+            </select>
+            <input type="text" class="form-control" id="amasquer1" placeholder="Saisir le nom de l'équipe adverse !"
+                style="display:none;" />
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect2">Equipe de l'école domicile</label>
+            <select class="form-control" id="numteam1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+
+        <div id="amasquerXdom">
+            <div>
+                <label for="exampleFormControlSelect2">Joueurs de l'équipe domicile</label>
+                <input class="form-control me-2" type="search" placeholder="Lolo Chauchau" aria-label="Search"
+                    id="searchjoueursdom" />
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit button"
+                    onclick="montrer_div('joueursdom');" id="searchdom">Rechercher</button>
+                <div class="form-control" id="joueursdom" placeholder="Aucun joueur trouvé" style="display:none;">
+                </div>
+            </div>
+
+            <div id="resultdom" class="width98"></div>
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#joueurs1" aria-expanded="false" aria-controls="joueurs1">
+                            Liste des joueurs déjà sélectionnés
+                        </button>
+                    </h2>
+                    <div id="joueurs1" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul id='listejoueurdom' class="list-group">
+                                Aucun joueur n'a encore été ajouté
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card width98" id="ajout8">
+    <div class="card-body">
+        <h5 class="card-title">Equipe visiteuse</h5>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Ecole visiteuse</label>
+            <select class="form-control" id="team2">
+                <option type="button" onclick="montrer_div('amasquerXvis');">X</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">AgroParisTech</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">AMOS</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">CS</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">CY Cergy</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Dauphine</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ECAM EPMI</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ECE Paris</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">EFREI Paris</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">EISTI Cergy</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">EM Normandie Paris</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ENS Saclay</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ENSEA Cergy</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ENSAE</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ENSTA</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">EPF Cachan</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ESCE/HEIP</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ESCP</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ESIEE Paris</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ESO Sporting Club</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ESSEC</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ESTACA</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ESTP</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Ginette</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Gustave Eiffel</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">HEC</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ICAM</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ICP</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">IESEG Paris</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">IGS</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ILEPS</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">INALCO</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">INSEEC</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">IPSA</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">ISEP</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Les Ponts</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Mines Telecom</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Panthéon ASSAS</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Panthéon Sorbonne</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Paris8</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Paris Cité</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Paris EST Créteil</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Paris Nanterre</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Paris Saclay</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Paris Sud</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Pole de Vinci</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">PSB</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXdom');">Sciences PO Paris</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Sciences PO St Germain en Laye
+                </option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Sorbonne Nouvelle</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Sorbonne Paris Nord</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">Sorbonne Université</option>
+                <option type="button" onclick="gardermasquer_div('amasquerXvis');">SKEMA</option>
+                <option type="button" onclick="montrer_div('amasquer2'); gardermasquer_div('amasquerXvis')">Autre
+                </option>
+            </select>
+            <input type="text" class="form-control" id="amasquer2" placeholder="Saisir le nom de l'équipe adverse !"
+                style="display:none;" />
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect2">Equipe de l'école visiteuse</label>
+            <select class="form-control" id="numteam2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+
+        <div id="amasquerXvis">
+            <div class="width98">
+                <label for="exampleFormControlSelect2">Joueurs de l'équipe visiteuse</label>
+                <input class="form-control me-2" type="search" placeholder="Lolo Chauchau" aria-label="Search"
+                    id="searchjoueursvis" />
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit button"
+                    onclick="montrer_div('joueursvis');" id="searchvis">Rechercher</button>
+                <div class="form-control" id="joueursvis" placeholder="Aucun joueur trouvé" style="display:none;">
+                </div>
+            </div>
+
+            <div id="resultvis" class="width98"></div>
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#joueurs2" aria-expanded="false" aria-controls="joueurs2">
+                            Liste des joueurs déjà sélectionnés
+                        </button>
+                    </h2>
+                    <div id="joueurs2" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <ul id=listejoueurvis class="list-group">
+                                Aucun joueur n'a encore été ajouté
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--ajouter les joueurs, gardiens, défenseurs, milieux et attaquants en faisant une jointure selon le sport et le poste qu'ils ont chosis-->
+<!--choisir la compo, pas forcer les postes par contre parce qu'en ffsu on est flexible ;)-->
+
+<div id="ajout9">
+    <div class="btn-group" role="group" aria-label="Basic example" id="ajoutmatchdiv">
+        <button id="ajoutmatch" type="button" class="btn btn-secondary">Ajouter le match</button>
+    </div>
+
+    <div class="btn-group" role="group" aria-label="Basic example" id="annulajoutmatchdiv">
+        <button id="annulmatch" class="btn btn-secondary" type="submit button"
+            onclick="montrer_div('confannulation'); masquer_div('ajout1'); masquer_div('ajout2'); masquer_div('ajout3'); masquer_div('ajout4'); masquer_div('ajout5'); masquer_div('ajout6'); masquer_div('ajout7'); masquer_div('ajout8'); masquer_div('ajout9'); masquer_div('ajout10');">Annuler
+            la saisie</button>
+    </div>
+</div>
+
+<div class="card width98" id="confannulation" style="display:none;">
+    <div class="card-body">
+        <h5 class="card-title">Êtes-vous sûr de vouloir confirmer l'annulation ?</h5>
+        <button class="btn btn-secondary" id="nonconfannul" type="submit button"
+            onclick="masquer_div('confannulation'); montrer_div('ajout1'); montrer_div('ajout2'); montrer_div('ajout3'); montrer_div('ajout4'); montrer_div('ajout5'); montrer_div('ajout6'); montrer_div('ajout7'); montrer_div('ajout8'); montrer_div('ajout9'); montrer_div('ajout10');">NON</button>
+        <a href="#futurs" class="btn btn-secondary" id="ouiconfannul">OUI</a>
+    </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />

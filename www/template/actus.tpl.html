@@ -1,0 +1,77 @@
+<div class="width98 container">
+  <div style="width: 94%">
+    <h3 class="titretemplate" id="titresactus">Dernières actus :</h3>
+  </div>
+  <div style="width: 6%"><button id="bouttonnouveaupost" onclick="masquer_div('formnouvelleactu');"> + </button></div>
+</div>
+
+<div id="formnouvelleactu" style="display:none;">
+  <div class="form-group width98">
+    <div class="form-group">
+      <label for="exampleFormControlSelect1" class="width30">Sport :</label>
+      <select class="form-control width50" id="sportactu">
+        <option onclick="gardermasquer_div('amasqueractu1');">AVIRON</option>
+        <option onclick="gardermasquer_div('amasqueractu1');">BAD</option>
+        <option onclick="gardermasquer_div('amasqueractu1');">BASKET</option>
+        <option onclick="gardermasquer_div('amasqueractu1');">BOXE</option>
+        <option onclick="gardermasquer_div('amasqueractu1');">CROSSFIT</option>
+        <option onclick="gardermasquer_div('amasqueractu1');">EQUITATION</option>
+        <option onclick="gardermasquer_div('amasqueractu1');">ESCALADE</option>
+        <option onclick="gardermasquer_div('amasqueractu1');">ESCRIME</option>
+        <option onclick="gardermasquer_div('amasqueractu1');">FOOT</option>
+        <option onclick="gardermasquer_div('amasqueractu1');">JUDO</option>
+        <option onclick="gardermasquer_div('amasqueractu1');">HAND</option>
+        <option onclick="gardermasquer_div('amasqueractu1');">NATATION</option>
+        <option onclick="gardermasquer_div('amasqueractu1');">RUGBY</option>
+        <option onclick="gardermasquer_div('amasqueractu1');">RAID</option>
+        <option onclick="gardermasquer_div('amasqueractu1');">TENNIS</option>
+        <option onclick="gardermasquer_div('amasqueractu1');">VOLLEY</option>
+        <option onclick="montrer_div('amasqueractu1');">AUTRES</option>
+      </select>
+      <input type="text" class="form-control" id="amasqueractu1" placeholder="Waterpolo ? Ultimate ? ..."
+        style="display:none;" />
+    </div>
+    <textarea class="form-control" id="contenueactu" placeholder="Dis-nous tout !" rows="3"></textarea>
+  </div>
+  <button type="button" class="btn btn-secondary" id="buttonpostactu"><img src="img/send.svg"
+      alt="send">&nbsp;Poster</button>
+  <br />
+</div>
+
+<div class="form-group row width98" id="Trierparactu">
+  <label for="exampleFormControlSelllect1" class="col-sm-2 col-form-label trierpar">Trier par:</label>
+  <select class="col-sm-10 choixtrierpar" id="exampleFormControlSelllect1">
+    <option>Date</option>
+    <option>AVIRON</option>
+    <option>BAD</option>
+    <option>BASKET</option>
+    <option>BOXE</option>
+    <option>CROSSFIT</option>
+    <option>EQUITATION</option>
+    <option>ESCALADE</option>
+    <option>ESCRIME</option>
+    <option>FOOT</option>
+    <option>JUDO</option>
+    <option>HAND</option>
+    <option>NATATION</option>
+    <option>RUGBY</option>
+    <option>RAID</option>
+    <option>TENNIS</option>
+    <option>VOLLEY</option>
+    <option>AUTRES</option>
+  </select>
+</div>
+
+{{#.}}
+<div class="card carte width98">
+  <div class="card-header toutfull //carte{{sport}} container">
+    <div class="nav-item width20">
+      <img class="centrer" src="img/iconesport/icone{{sport}}.svg" alt=''></a>
+    </div>
+    <div>{{sport}} | {{prenomnompubliant}}</div>
+  </div>
+  <div class="card-body toutfull //carte{{sport}} width100 container">
+    {{contenuactu}}
+  </div>
+</div>
+{{/.}}

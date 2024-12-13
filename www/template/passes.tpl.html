@@ -1,0 +1,53 @@
+<h3 class="width90 titretemplate" id="titretemplatepasses">Résultats des rencontres</h3>
+
+<div class="form-group row" id="Trierparpassestt">
+  <label for="staticEmail" class="col-sm-2 col-form-label trierpar">Trier par:</label>
+  <select class="col-sm-10 choixtrierpar">
+    <option class="Trierpardatefutur">Date</option>
+    <option class="Trierparfutur">AVIRON</option>
+    <option class="Trierparfutur">BAD</option>
+    <option class="Trierparfutur">BASKET</option>
+    <option class="Trierparfutur">BOXE</option>
+    <option class="Trierparfutur">CROSSFIT</option>
+    <option class="Trierparfutur">EQUITATION</option>
+    <option class="Trierparfutur">ESCALADE</option>
+    <option class="Trierparfutur">ESCRIME</option>
+    <option class="Trierparfutur">FOOT</option>
+    <option class="Trierparfutur">JUDO</option>
+    <option class="Trierparfutur">HAND</option>
+    <option class="Trierparfutur">NATATION</option>
+    <option class="Trierparfutur">RUGBY</option>
+    <option class="Trierparfutur">RAID</option>
+    <option class="Trierparfutur">TENNIS</option>
+    <option class="Trierparfutur">VOLLEY</option>
+    <option class="Trierparfutur">AUTRES</option>
+  </select>
+</div>
+
+{{#.}}
+<div class="card carte width98">
+  <div class="card-header toutfull //carte{{sport}} container">
+    <div class="nav-item width20">
+      <img class="centrer" src="img/iconesport/icone{{sport}}.svg" alt=''></a>
+    </div>
+    <div>{{sport}} {{genre}} | {{type}} | {{dateaffichage}} {{heure}}</div>
+  </div>
+  <div class="card-body toutfull //carte{{sport}} width100 container">
+    <img class="centrer" src="img/logo écoles/logo{{ecoledom}}.JPEG" alt='' style="width:25%"></a>
+    <!--<img class="centrer" src="logo écoles/logo{{ecoledom}}.PNG" alt=''></a>
+      <img class="centrer" src="logo écoles/logo{{ecoledom}}.JPG" alt=''></a>-->
+    <a href="#match"
+      class="btn //carte{{sport}} toutfull child apparencematch boutonpourchargermatch centrertext textmatch"
+      data-id="{{id}}" style="width:50%">{{ecoledom}} {{numecoledom}}<br>-<br>{{ecolevis}} {{numecolevis}}</a>
+    <img class="centrer" src="img/logo écoles/logo{{ecolevis}}.JPEG" alt='' style="width:25%"></a>
+    <!--<img class="centrer" src="logo écoles/logo{{ecolevis}}.PNG" alt='' style="width:25%"></a>-->
+    <!--<img class="centrer" src="logo écoles/logo{{ecolevis}}.JPG" alt=''></a>-->
+  </div>
+</div>
+{{/.}}
+
+
+<br />
+<br />
+<br />
+<br />

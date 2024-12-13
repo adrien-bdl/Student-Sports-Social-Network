@@ -1,0 +1,83 @@
+<nav class="navbar navbar-expand bg-body-tertiary conv">
+
+  <div style="width: 1%"></div>
+
+  <div style="width: 63%"><button class="navbar-brand" id="titregroupe"
+      onclick="masquer_div('réglagedugroupe'); gardermasquer_div('covoiturage'); gardermasquer_div('recherchermessageconv'); gardermasquer_div('sgmaillot');">Nom
+      du groupe méga long</button></div>
+
+  <div style="width: 7%"></div>
+
+  <div class="nav-item" id="searchnavbas" style="width: 10%">
+    <button class="nav-link active"
+      onclick="masquer_div('recherchermessageconv'); gardermasquer_div('réglagedugroupe'); gardermasquer_div('covoiturage'); gardermasquer_div('sgmaillot');"><img
+        class="centrer" src="img/search.svg" alt=''></button>
+  </div>
+
+  <div class="nav-item" id="settingsnavbas" style="width: 10%">
+    <button class="nav-link active"
+      onclick="masquer_div('covoiturage'); gardermasquer_div('réglagedugroupe'); gardermasquer_div('recherchermessageconv'); gardermasquer_div('sgmaillot');"><img
+        class="centrer" src="img/car.svg" alt=''></button>
+  </div>
+
+  <div class="nav-item" id="bellnavbas" style="width: 10%">
+    <button class="nav-link active"
+      onclick="masquer_div('sgmaillot'); gardermasquer_div('réglagedugroupe'); gardermasquer_div('recherchermessageconv'); gardermasquer_div('covoiturage'); "><img
+        class="centrer" src="img/shirt.svg" alt=''></button>
+  </div>
+
+  <div style="width: 1%"></div>
+</nav>
+
+<!--comme onglet mettre covoiturage et recherche de message sg numéro de maillot-->
+
+
+<div id="réglagedugroupe" style="display : none">
+  <div class="card">
+    {{#.}}
+    <div class="card-header">
+      <p class="card-text">{{sport}} {{genre}} | {{dateaffichage}} {{heure}}</p>
+    </div>
+    <div class="container">
+      <img class="centrer" src="img/logo écoles/logo{{ecoledom}}.JPEG" alt='' style="width:25%"></a>
+      <!--<img class="centrer" src="logo écoles/logo{{ecoledom}}.PNG" alt=''></a>
+      <img class="centrer" src="logo écoles/logo{{ecoledom}}.JPG" alt=''></a>-->
+      <a href="#match"
+        class="btn //carte{{sport}} toutfull child apparencematch boutonpourchargermatch centrertext textmatch"
+        data-id="{{id}}" style="width:50%">{{ecoledom}} {{numecoledom}}<br>-<br>{{ecolevis}} {{numecolevis}}</a>
+      <img class="centrer" src="img/logo écoles/logo{{ecolevis}}.JPEG" alt='' style="width:25%"></a>
+      <!--<img class="centrer" src="logo écoles/logo{{ecolevis}}.PNG" alt='' style="width:25%"></a>-->
+      <!--<img class="centrer" src="logo écoles/logo{{ecolevis}}.JPG" alt=''></a>-->
+    </div>
+    <p class="card-text">{{type}}</p>
+    <p class="card-text">{{lieu}}</p>
+    <p class="card-text">{{description}}</p>
+    {{/.}}
+  </div>
+</div>
+
+<div id="recherchermessageconv" style="display: none">
+  rechercher message dans la conv, pas encore dispo
+</div>
+
+<div id="covoiturage" style="display: none">
+  <h5 class="titretemplate">Covoiturage</h5>
+  <div class="container">
+    <div>
+      J'ai une voiture
+    </div>
+    <div style="width:3%"></div>
+    <div>
+      <button class="btn btn-secondary">Ajouter ma voiture</button>
+    </div>
+  </div>
+</div>
+
+<div id="sgmaillot" style="display: none">
+  Bientôt diponible. Vous pourrez shotgun votre numéro de maillot !
+</div>
+
+<br />
+<br />
+<br />
+<br />

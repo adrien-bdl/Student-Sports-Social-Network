@@ -1,0 +1,62 @@
+<!--infos de base sur le joueur-->
+<div class="card">
+    {#player}
+    <img src="{#photodeprofil}" class="card-img-top" alt="smiley face">
+    <div class="card-body">
+        <h5 class="card-title">{prénom nom}</h5>
+        <p class="card-text">{sport}</p>
+        <p class="card-text">{poste}</p>
+    </div>
+    {/player}
+</div>
+
+<!--statistiques-->
+<div class="ds-skill">
+    {#player}
+    <h6>Statistiques <i class="fa fa-code" aria-hidden="true"></i></h6>
+    <div class="skill html">
+        <h6><i class="fab fa-html5"></i> Note moyenne </h6>
+        <div class="bar bar-html">
+            <p>{Notemoyenne}</p>
+        </div>
+    </div>
+    <div class="skill css">
+        <h6><i class="fab fa-css3-alt"></i> Matchs joués </h6>
+        <div class="bar bar-css">
+            <p>{Matchsjoues}</p>
+        </div>
+    </div>
+    <div class="skill css">
+        <h6><i class="fab fa-css3-alt"></i> Minutes jouées par match </h6>
+        <div class="bar bar-css">
+            <p>{Minutesmoyennes}</p>
+        </div>
+    </div>
+    <div class="skill javascript">
+        <h6><i class="fab fa-js"></i> Buts marqués </h6>
+        <div class="bar bar-js">
+            <p>{Butsmarques}</p>
+        </div>
+    </div>
+    <div class="skill css">
+        <h6><i class="fab fa-css3-alt"></i> Buts encaissés </h6>
+        <div class="bar bar-css">
+            <p>{Butsencaisses}</p>
+        </div>
+    </div>
+    {/player}
+</div>
+
+<!--liste de l'historique de tous les matchs ou compétitons auquel il a déjà participé-->
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Matchs joués</h5>
+        <div class="list-group">
+            {#cours}
+            <a href="#lienverslapagedumatch" class="list-group-item">
+                {team1} {score} {team2}
+            </a>
+            {/cours}
+        </div>
+    </div>
+</div>

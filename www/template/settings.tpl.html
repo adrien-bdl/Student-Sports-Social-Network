@@ -1,0 +1,86 @@
+<br />
+<h3 class="width90 titretemplate" id="titretemplatesettings">Paramètres</h3>
+
+<div class="list-group" id="contenusettings">
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h4 class="width90 titretemplate">Langue</h4>
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary" onclick="montrer_div('soondispo')">English</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Français</button>
+        </div>
+        <div id="soondispo" style="display: none;">English soon available - Très bientôt disponible</div>
+    </div>
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h4 class="width90 titretemplate">Change ton mot de passe</h4>
+        </div>
+        <div class="form-group width98">
+            <label for="exampleFormControlInput1">Ancien mot de passe</label>
+            <input type="password" class="form-control"  id="ancienmdp"/>
+        </div>
+        <div class="form-group width98">
+            <label for="exampleFormControlInput1">Nouveau mot de passe</label>
+            <input type="password" class="form-control" id="newmdp" />
+        </div>
+        <div class="form-group width98">
+            <label for="exampleFormControlInput1">Confirmer le mot de passe</label>
+            <input type="password" class="form-control" id="confnewmdp"/>
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic example" id="boutonnouveaumdp">
+            <button type="button" class="btn btn-secondary" id="enregistrernewmdp">Enregistrer le nouveau mot de passe</button>
+        </div>
+    </div>
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h4 class="width90 titretemplate">Notifications</h4>
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Notifs par mail</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Activer les notifs</button>
+        </div>
+    </div>
+    <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+            <h4 class="width90 titretemplate">Aidez nous à développer Pronostix !</h4>
+        </div>
+        <div class="form-group width98">
+            <label for="recommandationappli">Une recommandation pour le développement de l'appli ?</label>
+            <input type="text" class="form-control" id="recommandationappli" />
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Envoyer</button>
+        </div>
+        <div>Laisser un avis sur le store</div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Accéder au store</button>
+        </div>
+    </div>
+</div>
+
+<div class="btn-group" role="group" aria-label="Basic example" id="divlogout">
+    <button type="button" class="btn btn-secondary" id="deconnect"
+        onclick="montrer_div('confdeconnect'); masquer_div('divlogout'); masquer_div('contenusettings'); masquer_div('titretemplatesettings')">Se déconnecter</button>
+</div>
+
+<div class="card width98" id="confdeconnect" style="display:none;">
+    <div class="card-body">
+        <h5 class="card-title">Êtes-vous sûr de vouloir vous déconnecter ?</h5>
+
+        <button class="btn btn-secondary" id="nonconfconnect" type="submit button"
+            onclick="masquer_div('confdeconnect'); montrer_div('divlogout'); montrer_div('contenusettings'); montrer_div('titretemplatesettings')">NON</button>
+        <button class="btn btn-secondary" id="logout">OUI</button>
+
+    </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />

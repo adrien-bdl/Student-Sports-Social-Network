@@ -1,0 +1,84 @@
+{{#.}}
+<div class="card container" id="cartetitreprofil">
+    <img src="img/photodeprofil.JPEG" class="card-img-top width30" alt="photodeprofil">
+    <div class="card-body">
+        <h5 class="card-title centrertext">{{prénom}} {{nom}}</h5>
+        <div class="container">
+            <div class="card-text width20"><img class="centrer" src="img/iconesport/icone{{sport}}.svg" alt=''></div>
+            <div>{{sport}}</div>
+        </div>
+        <p class="card-text centrertext">{{poste}}</p>
+    </div>
+</div>
+
+<!--statistiques-->
+<div class="ds-skill width98">
+    <h4 class="titretemplate">Statistiques</h4>
+    <div class="skill html">
+        <h6><i class="fab fa-html5"></i> Note moyenne </h6>
+        <div class="bar bar-html">
+            <p>{{note}}</p>
+        </div>
+    </div>
+    <div class="skill css">
+        <h6><i class="fab fa-css3-alt"></i> Nombre de matchs joués </h6>
+        <div class="bar bar-css">
+            <p>{{matchs}}</p>
+        </div>
+    </div>
+    <div class="skill css">
+        <h6><i class="fab fa-css3-alt"></i> Minutes jouées par match </h6>
+        <div class="bar bar-css">
+            <p>{{minutes}}</p>
+        </div>
+    </div>
+    <div class="skill javascript">
+        <h6><i class="fab fa-js"></i> Buts marqués </h6>
+        <div class="bar bar-js">
+            <p>{{buts_marque}}</p>
+        </div>
+    </div>
+    <div class="skill css">
+        <h6><i class="fab fa-css3-alt"></i> Buts encaissés </h6>
+        <div class="bar bar-css">
+            <p>{{buts_encaisse}}</p>
+        </div>
+    </div>
+</div>
+{{/.}}
+
+<div class="accordion" >
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#joueurs1" aria-expanded="false" aria-controls="joueurs1">
+                Matchs joué
+            </button>
+        </h2>
+        <div id="joueurs1" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <ul id='listejoueurdom' class="list-group">
+                    Ici vous pourrez voir tous les matchs auxquels le joueur a participé et ses statistiques pour chaque match
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
